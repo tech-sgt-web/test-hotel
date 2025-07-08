@@ -1,0 +1,233 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .hotel-name {
+      font-family: 'Brush Script MT', cursive;
+      color: #d4af37;
+      font-size: 18px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: #fff;
+      margin-top: -5px;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-menu li {
+      position: relative;
+    }
+
+    .nav-menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    .dropdown {
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.9);
+      list-style: none;
+      padding: 10px 0;
+      min-width: 160px;
+      z-index: 1000;
+    }
+
+    .dropdown-menu li a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .dropdown-menu li a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dropdown-parent:hover .dropdown-menu {
+      display: block;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .book-btn {
+      background-color: transparent;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .book-btn:hover {
+      background-color: white;
+      color: black;
+    }
+
+    /* Hero Slider with Swiper */
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white;
+    }
+.swiper-pagination {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+
+
+.swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border: 3px solid #d4af37;
+  border-radius: 50%;
+  opacity: 0.7;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #d4af37;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+
+    .hero-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 40px 20px;
+      border-radius: 12px;
+      max-width: 90%;
+      z-index: 2;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero-overlay p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-btn {
+      background-color: #d4af37;
+      color: #000;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .hero-btn:hover {
+      background-color: #b38f20;
+    }
+
+    @media (max-width: 992px) {
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+      }
+
+      .nav-menu.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .dropdown-menu {
+        position: static;
+      }
+
+      .dropdown-parent.active .dropdown-menu {
+        display: block;
+      }
+    }

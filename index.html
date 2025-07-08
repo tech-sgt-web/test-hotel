@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Advanced Hotel Navbar</title>
   <link rel="stylesheet" href="styles.css" />
+  <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
 
-  <header class="navbar sticky" id="navbar">
-    <div class="navbar-left">
-      <div class="logo">
-        <img src="https://via.placeholder.com/50x40?text=Logo" alt="Logo" />
-        <span class="hotel-name">Hotels</span>
-        <div class="tagline">Your journey, Our passion</div>
-      </div>
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="logo">
+      <img src="./images/sgtuFootLogo.svg" alt="Logo" />
+      <span class="hotel-name">Hotels</span>
+      <div class="tagline">Your journey, Our passion</div>
     </div>
-
-    <nav class="navbar-center">
+    <nav>
       <ul class="nav-menu" id="nav-menu">
         <li class="dropdown-parent">
-          <a href="#">Our Hotels & Resorts <span class="dropdown">&#9662;</span></a>
+          <a href="#">Hotels & Resorts <span class="dropdown">&#9662;</span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Luxury</a></li>
             <li><a href="#">Budget</a></li>
@@ -45,23 +46,31 @@
           </ul>
         </li>
         <li><a href="#">Weddings</a></li>
-        <li><a href="#">Meetings & Celebrations</a></li>
-        <li><a href="#">Partner With Us</a></li>
+        <li><a href="#">Meetings</a></li>
+        <li><a href="#">Partner</a></li>
       </ul>
     </nav>
-
     <div class="navbar-right">
       <div class="hamburger" id="hamburger">&#9776;</div>
       <a href="#" class="book-btn">BOOK NOW</a>
     </div>
-  </header>
+  </div>
+</header>
 
+<section class="hero-slider">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('https://picsum.photos/id/1015/1920/1080');"></div>
+      <div class="swiper-slide" style="background-image: url('https://picsum.photos/id/1018/1920/1080');"></div>
+      <div class="swiper-slide" style="background-image: url('https://picsum.photos/id/1025/1920/1080');"></div>
+    </div>
 
-  <section class="hero-section">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="your-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+    <!-- Navigation & Pagination -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
   <div class="hero-overlay">
     <h1>Welcome to Our Luxury Hotels</h1>
     <p>Your journey of comfort and elegance begins here.</p>
@@ -70,8 +79,33 @@
 </section>
 
 
-
   <script src="script.js"></script>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+    effect: 'fade',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+
+  // Hamburger menu toggle
+  document.getElementById('hamburger').addEventListener('click', function () {
+    document.getElementById('nav-menu').classList.toggle('show');
+  });
+</script>
 </body>
 </html>
 

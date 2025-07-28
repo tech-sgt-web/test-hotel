@@ -1,62 +1,65 @@
 <?php
-if(isset($_POST['register']))
-{
-    $email = $_POST['email'];
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $checkin_date = $_POST['checkin_date'];
-    $checkout_date = $_POST['checkout_date'];
-    $adults = $_POST['adults'];
-    $children = $_POST['children'];
-    $children = $_POST['Arrival_time'];
-    $children = $_POST['Need_airport_pickup'];
-    $message = $_POST['message'];
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    // Insert data into the database
-    $con = mysqli_connect("localhost","classic_db","Chandu@12345","sgtuniversityac_classichotel");
-    $query = "INSERT INTO booking (email, name, phone, checkin_date, checkout_date, adults, children, Arrival_time, Need_airport_pickup, message) 
-              VALUES ('$email', '$name', '$phone', '$checkin_date', '$checkout_date', '$adults', '$children', '$Arrival_time' '$Need_airport_pickup' '$message')";
-    $result = mysqli_query($con, $query);
+require './PHPMailer/src/PHPMailer.php';
+require './PHPMailer/src/SMTP.php';
+require './PHPMailer/src/Exception.php';
 
-    if($result)
-    {
-        echo "Thank you for filling the form! We will reach out to you soon.";
+if (isset($_POST['register'])) {
+    $email         = $_POST['email'] ?? '';
+    $name          = $_POST['name'] ?? '';
+    $phone         = $_POST['phone'] ?? '';
+    $room_type     = $_POST['room_type'] ?? '';
+    $checkin_date  = $_POST['checkin_date'] ?? '';
+    $checkout_date = $_POST['checkout_date'] ?? '';
+    $adults        = $_POST['adults'] ?? 0;
+    $children      = $_POST['children'] ?? 0;
+    $arrival_time  = $_POST['arrival_time'] ?? '';
+    $message       = $_POST['message'] ?? '';
 
-        // Generate and send email
-        $to = "chandrabhan_dmarketing@sgtuniversity.org"; // Update with your email address
-        $subject = "New Booking Form Submission";
-        $email_message = "A new booking form has been submitted:\n\n";
-        $email_message .= "Name: $name\n";
-        $email_message .= "Email: $email\n";
-        $email_message .= "Phone: $phone\n";
-        $email_message .= "Check-in Date: $checkin_date\n";
-        $email_message .= "Check-out Date: $checkout_date\n";
-        $email_message .= "Adults: $adults\n";
-        $email_message .= "Children: $children\n";
-        $email_message .= "Arrival_time: $Arrival_time\n";
-        $email_message .= "Need_airport_pickup: $Need_airport_pickup\n";
-        $email_message .= "Message: $message\n";
+    $conn = new mysqli("localhost", "root", "", "classic_db");
+    if ($conn->connect_error) {
+        die("Database Connection Failed: " . $conn->connect_error);
+    }
 
-        // Use PHPMailer library to send emails
-        require './PHPMailer/src/PHPMailer.php';
-        require './PHPMailer/src/SMTP.php';
-        require './PHPMailer/src/Exception.php';
+    $query = "INSERT INTO reservations (email, name, phone, room_type, checkin_date, checkout_date, adults, children, arrival_time, message)
+              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("ssssssiiis", $email, $name, $phone, $room_type, $checkin_date, $checkout_date, $adults, $children, $arrival_time, $message);
 
-        $mail = new PHPMailer\PHPMailer\PHPMailer();
+    if ($stmt->execute()) {
+        // Send Email
+        $to = "chandrabhan_dmarketing@sgtuniversity.org";
+        $subject = "New Hotel Reservation";
+        $body = "A new reservation has been submitted:\n\n";
+        $body .= "Name: $name\nEmail: $email\nPhone: $phone\nRoom Type: $room_type\n";
+        $body .= "Check-in: $checkin_date\nCheck-out: $checkout_date\nAdults: $adults\nChildren: $children\n";
+        $body .= "Arrival Time: $arrival_time\nMessage: $message";
+
+        $mail = new PHPMailer();
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'chandu.gautam.13@gmail.com'; // Your email
+        $mail->Password = 'ttyiedvrlwalamuq'; // Your app password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
         $mail->setFrom('sales@classichotelsindia.com', 'Classic Hotels');
         $mail->addAddress($to);
         $mail->Subject = $subject;
-        $mail->Body = $email_message;
+        $mail->Body = $body;
+        $mail->send(); // no need to check here, even if it fails
 
-        if($mail->send()) {
-            echo "An email notification has been sent to the administrator.";
-        } else {
-            echo "An error occurred while sending the email.";
-        }
+        // ✅ Redirect to Thank You Page
+        header("Location: thank-you.html");
+        exit();
+    } else {
+        echo "❌ Error inserting data: " . $stmt->error;
     }
-    else
-    {
-        echo "Insertion Failed";
-    }
+
+    $stmt->close();
+    $conn->close();
 }
 ?>

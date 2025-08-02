@@ -36,13 +36,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.example.com'; // 🔁 your SMTP host
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'your@email.com';   // 🔁 your email
-        $mail->Password   = 'yourpassword';     // 🔁 your password
+        $mail->Username   = 'akashgunjal2904@gmail.com';   // 🔁 your email
+        $mail->Password   = 'udljyhjbbpmidcqg';     // 🔁 your password
         $mail->SMTPSecure = 'tls';
         $mail->Port       = 587;
 
-        $mail->setFrom('your@email.com', 'College Enquiry');
-        $mail->addAddress('recipient@email.com'); // 🔁 your receiving address
+        $mail->setFrom('akashgunjal2904@gmail.com', 'College Enquiry');
+        $mail->addAddress('tech_dmarketing@sgtuniversity.org'); // 🔁 your receiving address
 
         $mail->isHTML(true);
         $mail->Subject = "New Application Submission";

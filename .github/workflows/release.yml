@@ -22,5 +22,6 @@ jobs:
       - name: Set correct permissions
         run: sudo chown -R www-data:www-data /var/www/hotel/html
 
-      - name: Reload Apache
-        run: sudo systemctl reload apache2
+      - name: Reload Nginx
+        run: sudo systemctl reload nginx
+

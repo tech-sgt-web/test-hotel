@@ -2,9 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require './assets/files/PHPMailer/PHPMailer.php';
-require './assets/files/PHPMailer/SMTP.php';
-require './assets/files/PHPMailer/Exception.php';
+require './assets/files/PHPMailer/src/PHPMailer.php';
+require './assets/files/PHPMailer/src/SMTP.php';
+require './assets/files/PHPMailer/src/Exception.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name   = trim($_POST['name'] ?? '');

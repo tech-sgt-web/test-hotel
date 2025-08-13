@@ -1,83 +1,1023 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Application Form for Student</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Classic Hotel </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" type="text/css"
+    href="//fonts.googleapis.com/css?family=|Roboto+Sans:400,700|Playfair+Display:400,700">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/fancybox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <!-- Theme Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.cdnfonts.com/css/freebooter-script" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
+    .my-text {
+      font-family: 'Freebooter Script', sans-serif;
     }
 
-    h2 {
-      color: #192378;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      max-width: 400px;
-    }
-
-    label {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    input,
-    textarea,
-    select {
-      margin-top: 5px;
-      padding: 10px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 12px;
-      background-color: #192378;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #151e5f;
+    @font-face {
+      font-family: 'Freebooter Script';
+      src: url('FREEBSC_.ttf') format('truetype');
     }
   </style>
 </head>
 
 <body>
-  <form action="send.php" method="post">
+  <!-- Header Section -->
+  <!-- HEADER -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Hotel-Logo-PNG-1024x223.png" alt="Logo" class="img-fluid rounded" style="height:65px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav me-3">
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link active" href="index.html">Home</a></li>
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="about.html">About</a></li>
 
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone">
+            <!-- HOTELS MEGA MENU WITH YELLOW LEFT BLOCK -->
+            <li class="nav-item dropdown dropdown-mega">
+              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#">Hotels</a>
+              <ul class="dropdown-menu">
+                <div class="container-fluid">
+                  <div class="row g-0">
+                    <!-- Yellow Section -->
+                    <div class="col-md-3 p-4 text-black" style="background-color: #ffc107;">
+                      <div class="h-100 d-flex flex-column justify-content-center">
+                        <h3 style="font-weight: 700; font-size: 20px; text-transform: uppercase;">
+                          Unwind in Timeless Luxury</h3>
+                        <p style="font-size: 14px; font-weight: 500;">Exclusive offers and
+                          special
+                        </p>
+                      </div>
+                    </div>
 
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email">
+                    <!-- Hotel Grid -->
+                    <div class="col-md-9 px-4 py-4">
+                      <div class="mega-grid">
+                        <div class="mega-item">
+                          <img src="images/classic-img.jpg" class="mega-image" alt="Delhi Hotel">
+                          <a href="hotels-in-delhi.html">Classic Diplomat, New Delhi</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/chamba-img.jpg" class="mega-image" alt="Chamba Hotel">
+                          <a href="hotels-in-chamba.html">Classic Hill Top Resort, Chamba</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/haridwar-img.jpg" class="mega-image" alt="Haridwar Hotel">
+                          <a href="hotels-in-haridwar.html">Classic Residency, Haridwar</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/naini-img.jpg" class="mega-image" alt="Nainital Hotel">
+                          <a href="hotels-in-nainital.html">Classic The Mall, Nainital</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
 
-    <label for="course">Course:</label>
-    <select id="course" name="course">
-      <option value="">Select a course</option>
-      <option value="bsc">Bsc. Nursing</option>
-      <option value="gnm">General Nursing and Midwifery</option>
-    </select>
+            <!-- ROOMS MEGA MENU (default style) -->
+            <li class="nav-item dropdown dropdown-mega">
+              <a class="nav-link dropdown-toggle px-2 px-lg-3" href="#">Room</a>
+              <ul class="dropdown-menu">
+                <div class="container-fluid">
+                  <div class="row g-0">
+                    <!-- Yellow Section -->
+                    <div class="col-md-3 p-4 text-black" style="background-color: #ffc107;">
+                      <div class="h-100 d-flex flex-column justify-content-center">
+                        <h3 style="font-weight: 700; font-size: 20px; text-transform: uppercase;">
+                          BOOK DIRECT OFFERS</h3>
+                        <p style="font-size: 14px; font-weight: 500;">Exclusive offers and
+                          special
+                        </p>
 
-    <label for="city">City:</label>
-    <input type="text" id="city" name="city">
+                      </div>
+                    </div>
 
-    <button type="submit">Submit Application</button>
+                    <!-- Hotel Grid -->
+                    <div class="col-md-9 px-4 py-4">
+                      <div class="mega-grid">
+                        <div class="mega-item">
+                          <img src="images/room-img/deluxe-room.jpeg" class="mega-image" alt="Delhi Hotel">
+                          <a href="room-at-classic-diplomat-delhi.html">Classic Diplomat, New
+                            Delhi</a>
+                          <a href="reservation.html">-Suite Room</a>
+                          <a href="reservation.html">-Family Suite Room</a>
+                          <a href="reservation.html">-Deluxe Premium Room</a>
 
-  </form>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/room-img/chmba-primium.jpeg" class="mega-image" alt="Chamba Hotel">
+                          <a href="room-at-classic-hill-top-chamba.html">Classic Hill Top
+                            Resort, Chamba</a>
+                          <a href="reservation.html">-Deluxe Room</a>
+                          <a href="reservation.html">-Premium Room</a>
+
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/room-img/hari-primu-img-2.JPG" class="mega-image" alt="Haridwar Hotel">
+                          <a href="room-at-classic-residency-haridwar.html">Classic Residency,
+                            Haridwar</a>
+                          <a href="reservation.html">-Premium Room</a>
+                          <a href="reservation.html">-Suite Room</a>
+                          <a href="reservation.html">-Deluxe Premium Room</a>
+                          <a href="reservation.html">-Executive Suit Room</a>
+                        </div>
+                        <div class="mega-item">
+                          <img src="images/room-img/nani-pre-img-1.jpg" class="mega-image" alt="Nainital Hotel">
+                          <a href="room-at-classic-the-mall-nainital.html">Classic The Mall,
+                            Nainital</a>
+                          <a href="reservation.html">-Deluxe Room</a>
+                          <a href="reservation.html">-Premium Room</a>
+                          <a href="reservation.html">-Classic Suit Room</a>
+                          <a href="reservation.html">-Family Room</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ul>
+            </li>
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="#">Meeting & conferences</a></li>
+
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <a href="reservation.html" class="enquire-btn">Enquire Now</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <header class="mobile-header d-lg-none">
+    <nav class="mobile-nav">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="mobile-logo">
+          <img src="images/Hotel-Logo-PNG-1024x223.png" alt="Logo" style="height: 50px;">
+        </a>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle">&#9776;</button>
+      </div>
+      <ul class="mobile-menu" id="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="has-submenu">
+          <a href="#">Hotels</a>
+          <ul class="submenu">
+            <li><a href="hotels-in-delhi.html">Classic Diplomat, New Delhi</a></li>
+            <li><a href="hotels-in-chamba.html">Classic Hill Top Resort, Chamba</a></li>
+            <li><a href="hotels-in-haridwar.html">Classic Residency, Haridwar</a></li>
+            <li><a href="hotels-in-nainital.html">Classic The Mall, Nainital</a></li>
+          </ul>
+        </li>
+        <li class="has-submenu">
+          <a href="#">Rooms</a>
+          <ul class="submenu">
+            <li><a href="room-at-classic-diplomat-delhi.html">Rooms - New Delhi</a></li>
+            <li><a href="room-at-classic-hill-top-chamba.html">Rooms - Chamba</a></li>
+            <li><a href="room-at-classic-residency-haridwar.html">Rooms - Haridwar</a></li>
+            <li><a href="room-at-classic-the-mall-nainital.html">Rooms - Nainital</a></li>
+          </ul>
+        </li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="reservation.html" class="enquire-btn">Enquire Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Video -->
+  <section class="site-hero overlay" data-stellar-background-ratio="0.5">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="video/Chamba video_.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="container">
+      <div class="row site-hero-inner justify-content-center align-items-center text-center">
+        <div class="col-md-10" data-aos="fade-up">
+          <h1 class="heading">Welcome To Classic Hotels</h1>
+          <span class="custom-caption text-uppercase text-white d-block mb-3">Memories for a Lifetime</span>
+        </div>
+      </div>
+    </div>
+    <!-- <a class="mouse smoothscroll" href="#next">
+            <div class="mouse-icon">
+                <span class="mouse-wheel"></span>
+            </div>
+        </a> -->
+  </section>
+  <!-- END section -->
+
+  <section class="section bg-light pb-0">
+    <div class="container">
+      <div class="row check-availabilty" id="next">
+        <div class="block-32" data-aos="fade-up" data-aos-offset="-200">
+          <form action="reservation.html">
+            <div class="row">
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkin_date" class="font-weight-bold text-black">Check In</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="text" id="checkin_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-lg-0 col-lg-3">
+                <label for="checkout_date" class="font-weight-bold text-black">Check Out</label>
+                <div class="field-icon-wrap">
+                  <div class="icon"><span class="icon-calendar"></span></div>
+                  <input type="text" id="checkout_date" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6 mb-3 mb-md-0 col-lg-3">
+                <div class="row">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="adults" class="font-weight-bold text-black">Adults</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="adults" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <label for="children" class="font-weight-bold text-black">Children</label>
+                    <div class="field-icon-wrap">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="children" class="form-control">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3 align-self-end">
+                <button class="btn btn-primary btn-block text-white">Enquire Now</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-12 col-lg-7 ml-auto order-lg-2 position-relative mb-5" data-aos="fade-up">
+          <img src="images/about-img/about-delhi-img.jpeg" alt="Image" class="img-fluid" style="border-radius: 10px;">
+        </div>
+        <div class="col-md-12 col-lg-4 order-lg-1" data-aos="fade-up">
+          <h2 class="heading">Salutations!</h2>
+          <p class="mb-4">At Classic Hotels we create “ Memories for a Lifetime ”. The brand Classic Hotels owns and
+            operates hotels and resorts
+            located at four distinctions under the company registered in the name of New Age Hotels & Resorts Ltd. Three
+            hotels
+            located in Uttrakhand-- Haridwar, Chamba and Nainital respectively and one at New Delhi. All the properties
+            have
+            distinct ambience and offer varied features at each destination to make your stay memorable. </p>
+          <p><a href="#" class="btn btn-primary text-white py-2 mr-3">Learn More</a> <span
+              class="mr-3 font-family-serif"><em>or</em></span> <a href="#" data-fancybox
+              class="text-uppercase letter-spacing-1">See video</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading" data-aos="fade-up">Hotels &amp; Resort</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            The brand Classic Hotels owns and operates hotels and resorts located at four destinations,
+            three hotels in
+            Uttarakhand at Haridwar, Chamba and Nainital respectively and one at Mahipalpur in Delhi. All
+            the properties
+            have distinct ambience and offer varied features at each destination to make your stay
+            memorable.
+          </p>
+        </div>
+      </div>
+      <!-- Swiper -->
+      <div class="swiper mySwiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <a href="room-at-classic-diplomat-delhi.html" class="room">
+              <figure class="img-wrap">
+                <img src="images/classic-img.webp" alt="Single Room" class="img-fluid mb-3"
+                  style="border-radius: 10px;">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h4>Classic Diplomat – Delhi</h4>
+                <p><a href="hotels-in-delhi.html" class="btn btn-primary text-white py-2 mr-3">View
+                    More</a></span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="hotels-in-chamba.html" class="room">
+              <figure class="img-wrap">
+                <img src="images/chamba-img.webp" alt="Family Room" class="img-fluid mb-3" style="border-radius: 10px;">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h4>Classic Hill Top-Chamba</h4>
+                <p><a href="hotels-in-chamba.html" class="btn btn-primary text-white py-2 mr-3">View
+                    More</a></span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="hotels-in-haridwar.html" class="room">
+              <figure class="img-wrap">
+                <img src="images/haridwar-img.webp" alt="Family Room" class="img-fluid mb-3"
+                  style="border-radius: 10px;">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h4>Classic Residency-Haridwar</h4>
+                <p><a href="hotels-in-haridwar.html" class="btn btn-primary text-white py-2 mr-3">View
+                    More</a></span>
+              </div>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="hotels-in-nainital.html" class="room">
+              <figure class="img-wrap">
+                <img src="images/naini-img.webp" alt="Presidential Room" class="img-fluid mb-3"
+                  style="border-radius: 10px;">
+              </figure>
+              <div class="p-3 text-center room-info">
+                <h4>Classic The Mall- Nainital</h4>
+                <p><a href="hotels-in-nainital.html" class="btn btn-primary text-white py-2 mr-3">View
+                    More</a></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section slider-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading" data-aos="fade-up">Snapshots</h2>
+          <p data-aos="fade-up" data-aos-delay="100">
+            A few photos from our Classic Hotels across the nation with graceful interiors and picturesque
+            backdrops.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="home-slider major-caousel owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="slider-item">
+              <a href="images/snapshot/snap-img1.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/snapshot/snap-img1.jpg" alt="Image placeholder" class="img-fluid"
+                  style="border-radius: 10px;">
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="images/snapshot/snap-img2.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/snapshot/snap-img2.jpg" alt="Image placeholder" class="img-fluid"
+                  style="border-radius: 10px;">
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="images/snapshot/snap-img3.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/snapshot/snap-img3.jpg" alt="Image placeholder" class="img-fluid"
+                  style="border-radius: 10px;">
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="images/snapshot/snap-img4.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/snapshot/snap-img4.jpg" alt="Image placeholder" class="img-fluid"
+                  style="border-radius: 10px;">
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="images/snapshot/snap-img5.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/snapshot/snap-img5.jpg" alt="Image placeholder" class="img-fluid"
+                  style="border-radius: 10px;">
+              </a>
+            </div>
+            <div class="slider-item">
+              <a href="images/snapshot/snap-img7.jpg" data-fancybox="images" data-caption="Caption for this image">
+                <img src="images/snapshot/snap-img7.jpg" alt="Image placeholder" class="img-fluid"
+                  style="border-radius: 10px;">
+              </a>
+            </div>
+
+          </div>
+          <!-- END slider -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END section -->
+
+  <section class="section bg-image overlay" style="background-image: url('images/about-img/about-img6.jpg');">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading text-white" data-aos="fade">Facilities and Services</h2>
+          <p class="text-white" data-aos="fade" data-aos-delay="100">At Classic Hotel, we offer a seamless
+            blend of
+            comfort, elegance, and modern convenience. </p>
+        </div>
+      </div>
+      <div class="food-menu-tabs" data-aos="fade">
+        <ul class="nav nav-tabs mb-5" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active letter-spacing-2" id="delhi-tab" data-toggle="tab" href="#delhi" role="tab"
+              aria-controls="mains" aria-selected="true">Delhi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letter-spacing-2" id="chamba-tab" data-toggle="tab" href="#chamba" role="tab"
+              aria-controls="desserts" aria-selected="false">Chamba</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letter-spacing-2" id="nainital-tab" data-toggle="tab" href="#nainital" role="tab"
+              aria-controls="drinks" aria-selected="false">Nainital</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link letter-spacing-2" id="haridwar-tab" data-toggle="tab" href="#haridwar" role="tab"
+              aria-controls="drinks" aria-selected="false">Haridwar</a>
+          </li>
+        </ul>
+        <div class="tab-content py-5" id="myTabContent">
+
+
+          <div class="tab-pane fade show active text-left" id="delhi" role="tabpanel" aria-labelledby="delhi-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Tea Coffee Makers</a></h3>
+                  <p class="text-white text-opacity-7">Enjoy freshly brewed tea or coffee in the
+                    comfort of your room.
+                    Complimentary tea and coffee makers are available 24x7.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Hair Dryer LED TV Wi-fi
+                      Connectivity</a></h3>
+                  <p class="text-white text-opacity-7">Stay connected with high-speed Wi-Fi and enjoy
+                    entertainment on
+                    the LED TV. Hair dryers are provided in all rooms for
+                    your convenience.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Hot & Cold Water Supply Valet
+                      Parking</a></h3>
+                  <p class="text-white text-opacity-7">Round-the-clock hot and cold water supply
+                    ensures a refreshing
+                    stay. Hassle-free valet parking is available for all
+                    guests.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">100% Power back-up Doctor on
+                      call</a></h3>
+                  <p class="text-white text-opacity-7">Our hotel provides 100% power backup for
+                    uninterrupted comfort.
+                    Emergency medical assistance is available through our
+                    doctor on call service.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Sheving & Makeup Mirror 24x7
+                      In Room Dining</a>
+                  </h3>
+                  <p class="text-white text-opacity-7">Every bathroom is equipped with a shaving and
+                    makeup mirror for
+                    your grooming needs. Enjoy delicious meals anytime with
+                    our 24x7 in-room dining service.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Travel Desk</a></h3>
+                  <p class="text-white text-opacity-7">Our dedicated travel desk assists with
+                    bookings, sightseeing, and
+                    transportation. Make your Delhi experience seamless
+                    and memorable.</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div> <!-- .tab-pane -->
+
+          <div class="tab-pane fade text-left" id="chamba" role="tabpanel" aria-labelledby="chamba-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Dish-TV</a></h3>
+                  <p class="text-white text-opacity-7">Enjoy your favorite entertainment with a wide
+                    range of national
+                    and international channels through in-room Dish TV,
+                    ensuring relaxation and comfort during your stay.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Direct Dial</a></h3>
+                  <p class="text-white text-opacity-7">Stay connected effortlessly with our direct
+                    dial telephone
+                    service, allowing quick and easy communication both within
+                    the hotel and outside.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Hot & Cold Water</a></h3>
+                  <p class="text-white text-opacity-7">All bathrooms are equipped with 24-hour running
+                    hot and cold
+                    water, ensuring your comfort regardless of the season.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Doctor on call</a></h3>
+                  <p class="text-white text-opacity-7">Your health and safety are our priority. A
+                    qualified doctor is
+                    available on call for any medical assistance, providing
+                    peace of mind throughout your visit.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Filtered Drinking Water
+                      (R.O)</a>
+                  </h3>
+                  <p class="text-white text-opacity-7">We offer safe and hygienic RO-filtered drinking
+                    water in all
+                    rooms and common areas to ensure your well-being.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Wifi Internet</a></h3>
+                  <p class="text-white text-opacity-7">Stay connected with complimentary high-speed
+                    Wi-Fi available
+                    throughout the property, perfect for both business and
+                    leisure travelers.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .tab-pane -->
+          <div class="tab-pane fade text-left" id="haridwar" role="tabpanel" aria-labelledby="haridwar-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Cable-LCD TV</a></h3>
+                  <p class="text-white text-opacity-7">Relax in your room with a wide selection of
+                    entertainment options
+                    on a modern LCD TV equipped with multi-channel cable
+                    service for your viewing pleasure.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Direct Dail</a></h3>
+                  <p class="text-white text-opacity-7">Enjoy the convenience of direct dial telephones
+                    in every room,
+                    allowing quick communication with the front desk or
+                    external contacts.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Runing Hot & Cold Water</a>
+                  </h3>
+                  <p class="text-white text-opacity-7">All bathrooms feature 24/7 running hot and cold
+                    water, providing
+                    comfort and convenience no matter the time of day.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Refrigerator</a></h3>
+                  <p class="text-white text-opacity-7">Keep your beverages and essentials cool with an
+                    in-room
+                    refrigerator, adding to your comfort during the stay.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Private Balcony</a>
+                  </h3>
+                  <p class="text-white text-opacity-7">Each room offers a private balcony where you
+                    can unwind and enjoy
+                    serene views of the surroundings in peace and privacy.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Swimming Pool</a></h3>
+                  <p class="text-white text-opacity-7">Take a refreshing dip in our clean and
+                    well-maintained swimming
+                    pool—perfect for relaxing after a day of sightseeing or
+                    travel.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .tab-pane -->
+          <div class="tab-pane fade text-left" id="nainital" role="tabpanel" aria-labelledby="nainital-tab">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Hot & Cold Water</a></h3>
+                  <p class="text-white text-opacity-7">All bathrooms are equipped with 24-hour running
+                    hot and cold
+                    water, ensuring your comfort regardless of the season.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Dish-TV</a></h3>
+                  <p class="text-white text-opacity-7">Enjoy your favorite entertainment with a wide
+                    range of national
+                    and international channels through in-room Dish TV,
+                    ensuring relaxation and comfort during your stay.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Direct Dial</a></h3>
+                  <p class="text-white text-opacity-7">Stay connected effortlessly with our direct
+                    dial telephone
+                    service, allowing quick and easy communication both within
+                    the hotel and outside.</p>
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Doctor on call</a></h3>
+                  <p class="text-white text-opacity-7">Your health and safety are our priority. A
+                    qualified doctor is
+                    available on call for any medical assistance, providing
+                    peace of mind throughout your visit.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Filtered Drinking Water
+                      (R.O)</a>
+                  </h3>
+                  <p class="text-white text-opacity-7">We offer safe and hygienic RO-filtered drinking
+                    water in all
+                    rooms and common areas to ensure your well-being.</p>
+                </div>
+                <div class="food-menu mb-5">
+                  <h3 class="text-white"><a href="#" class="text-white">Wifi Internet</a></h3>
+                  <p class="text-white text-opacity-7">Stay connected with complimentary high-speed
+                    Wi-Fi available
+                    throughout the property, perfect for both business and
+                    leisure travelers.</p>
+                </div>
+              </div>
+            </div>
+          </div> <!-- .tab-pane -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END section -->
+  <section class="section testimonial-section">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading" data-aos="fade-up">People Says</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="js-carousel-2 owl-carousel mb-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+              <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+            </div> -->
+            <blockquote>
+              <p>&ldquo;This was my fifth visit. Have come here with friends, girlfriend, family, college friends. It’s
+                just a superb place for
+                a quick trip. Has everything what you need, clean rooms, good food and romantic view of the hills. If
+                you want to leave
+                the crowded city and relax just come here and relax for a day or two. at least you will have a good
+                sleep,&rdquo;</p>
+            </blockquote>
+            <p><em>&mdash; Subhomoy</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+              <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+            </div> -->
+            <blockquote>
+              <p>&ldquo;Excellent place to go. The first time I visited this place was around 20 years back and after
+                that the second time was
+                in August 2022. The experience was great as usual. Also, the chef who served us food 20 years back is
+                still continuing.
+                So, it is one more reason to visit the place.
+                &rdquo;</p>
+            </blockquote>
+            <p><em>&mdash; Lalit</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+              <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+            </div> -->
+            <blockquote>
+              <p>&ldquo;Best place to stay in chamba with best amenities.the staff behavior is very good. Food hiegine
+                is also maintained. I
+                love to be there. It's feel like heavenly.the cleanliness was also maintained. Very good property must
+                visit place to
+                hang on&rdquo;</p>
+            </blockquote>
+            <p><em>&mdash; Gaurav Bajpai</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+              <img src="images/person_1.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+            </div> -->
+            <blockquote>
+              <p>&ldquo;Great hotel to stay with good food. Rooms at ground floor are best in view. There is also kids
+                play area Flowers, duck
+                🦆 Family Restaurant tables at peak great looking and environment. Waiters are good and do service with
+                courtsy &rdquo;</p>
+            </blockquote>
+            <p><em>&mdash; Mohit</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+              <img src="images/person_2.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+            </div> -->
+            <blockquote>
+              <p>&ldquo;Continue from Haridwar to Chamba we stayed two nights in chamba while on the way to kanatal, The
+                room has a fabulous
+                view of the mountains and green trees all around managed and maintained with the familiar and smiling
+                staff, &rdquo;</p>
+            </blockquote>
+            <p><em>&mdash; Gajender P</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+              <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+            </div> -->
+            <blockquote>
+              <p>&ldquo;Hospitality at Classic Residency is superb. From receiving at the hotel gate, then reception and
+                room cleanliness are
+                all very good. Staff at all places is so polite and helping, which makes you feel like at home. &rdquo;
+              </p>
+            </blockquote>
+            <p><em>&mdash; Aman K</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+                        <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                      </div> -->
+            <blockquote>
+              <p>&ldquo;Memorable Stay... We visited in Classic to attend a marriage of my friend, it was a pleasant
+                stay. They have a good
+                space for around 300 people for the functions, they have hall and open area pool side also. Quite enough
+                space for
+                parking. &rdquo;
+              </p>
+            </blockquote>
+            <p><em>&mdash;Somesh Bagdi</em></p>
+          </div>
+          <div class="testimonial text-center slider-item">
+            <!-- <div class="author-image mb-3">
+                        <img src="images/person_3.jpg" alt="Image placeholder" class="rounded-circle mx-auto">
+                      </div> -->
+            <blockquote>
+              <p>&ldquo;I had a wonderful stay at Classic Residency Haridwar last week. It is a value for money Hotel.
+                Starting from Reception,
+                Rooms, Cafeteria, Park and Parking was just perfect! They had given me a splendid experience for almost
+                everything Food
+                and Beverages were really great. &rdquo;
+              </p>
+            </blockquote>
+            <p><em>&mdash; Sudhanshu S</em></p>
+          </div>
+        </div>
+        <!-- END slider -->
+      </div>
+    </div>
+  </section>
+
+  <section class="section blog-post-entry bg-light">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-md-7">
+          <h2 class="heading" data-aos="fade-up">Events</h2>
+          <p data-aos="fade-up">Far far away, behind the word mountains, far from the countries Vokalia and
+            Consonantia,
+            there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the
+            Semantics, a
+            large language ocean.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="100">
+          <div class="media media-custom d-block mb-4 h-100">
+            <a href="#" class="mb-4 d-block">
+              <img src="images/event-img/event-1.jpeg" alt="Image placeholder" class="img-fluid">
+            </a>
+            <div class="media-body">
+              <span class="meta-post">February 26, 2022</span>
+              <h2 class="mt-0 mb-3"><a href="#">Indian Actress Visited at Hotel Classic Diplomat</a></h2>
+              <p>Soni Kiran is an Indian actress known for her work in television and music. She has
+                appeared in shows
+                like "Jai Jai Bajrang Bali" and "Door Kinare Milte Hain".</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="media media-custom d-block mb-4 h-100">
+            <a href="#" class="mb-4 d-block">
+              <img src="images/event-img/big-boss-11.jpeg" alt="Image placeholder" class="img-fluid">
+            </a>
+            <div class="media-body">
+              <span class="meta-post">April 24, 2024</span>
+              <h2 class="mt-0 mb-3"><a href="#">Big Boss 11</a></h2>
+              <p>Arshi Khan, is an Indian model, actress, internet celebrity and reality television
+                personality. She is
+                known for
+                participating in Bigg Boss 11. She joined the Indian National Congress party to contest
+                the 2019
+                elections for Mumbai.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-12 post mb-5" data-aos="fade-up" data-aos-delay="300">
+          <div class="media media-custom d-block mb-4 h-100">
+            <a href="#" class="mb-4 d-block">
+              <img src="images/event-img/event-3.jpeg" alt="Image placeholder" class="img-fluid">
+            </a>
+            <div class="media-body">
+              <span class="meta-post">March 26, 2025</span>
+              <h2 class="mt-0 mb-3"><a href="#">Famous Bollywood Villain</a></h2>
+              <p>Ranjeet is an Indian actor and film director. He has mostly played famous bollywood
+                villain roles in
+                over 200 Hindi films.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="section bg-image overlay" style="background-image: url('images/gallery/delhi-gallery-2.JPG');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+          <h2 class="text-white font-weight-bold">So what are you waiting for? Book a room at a New Age Hotels
+            & Resorts
+            Limited.</h2>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+          <a href="reservation.html" class="btn btn-outline-white-primary py-3 text-white px-5">Reserve
+            Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="section footer-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li class="nav-item px-2 px-lg-3"><a class="nav-link" href="events.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5">
+          <ul class="list-unstyled link">
+            <li><a href="#">The Rooms &amp; Suites</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Restaurant</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-5 pr-md-5 contact-info">
+          <!-- <li>198 West 21th Street, <br> Suite 721 New York NY 10016</li> -->
+          <p><span class="d-block"><span class="ion-ios-location h5 mr-3 text-primary"></span>Address:</span>
+            <span>
+              Corp Office: A 4, NH 8, <br>IGI Airport Mahipalpur,<br>
+              New Delhi-110037
+              sales@classichotelsindia.com</span>
+          </p>
+          <p><span class="d-block"><span class="ion-ios-telephone h5 mr-3 text-primary"></span>Phone:</span>
+            <span>
+              8527090276, 8527055445, 8527090204</span>
+          </p>
+          <p><span class="d-block"><span class="ion-ios-email h5 mr-3 text-primary"></span>Email:</span>
+            <span>
+              sales@classichotelsindia.com</span>
+          </p>
+        </div>
+        <div class="col-md-3 mb-5">
+          <p>Sign up for our newsletter</p>
+          <form action="#" class="footer-newsletter">
+            <div class="form-group">
+              <input type="email" class="form-control" placeholder="Email...">
+              <button type="submit" class="btn"><span class="fa fa-paper-plane"></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row pt-5">
+        <p class="col-md-6 text-left">
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved |Classic Hotel <i
+            class="icon-heart-o" aria-hidden="true"></i>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        </p>
+
+        <p class="col-md-6 text-right social">
+          <a href="#"><span class="fa fa-tripadvisor"></span></a>
+          <a href="#"><span class="fa fa-facebook"></span></a>
+          <a href="#"><span class="fa fa-twitter"></span></a>
+          <a href="#"><span class="fa fa-linkedin"></span></a>
+          <a href="#"><span class="fa fa-vimeo"></span></a>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 30,
+      autoplay: {
+        delay: 3000, // 3 seconds
+        disableOnInteraction: false,
+      },
+      // Remove pagination and navigation
+      pagination: false,
+      navigation: false,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var header = document.querySelector('.js-site-header');
+      var logo = document.querySelector('.site-logo img');
+
+      if (window.scrollY > 50) {
+        // Change logo to black
+        logo.src = 'images/classic-hotel-black.png';
+      } else {
+        // Change back to original white logo
+        logo.src = 'images/Hotel-Logo-PNG-1024x223.png';
+      }
+    });
+  </script>
+  <!-- Scroll JS -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.getElementById('site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+
 </body>
 
 </html>

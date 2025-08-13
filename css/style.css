@@ -8,28 +8,6 @@
     font-display: swap;
 }
 
- /* ===== Heading + Tagline ===== */
-    .logo-title{
-      font-family: "FreebooterScript", "FreebooterScript Alts", cursive;
-      font-size: clamp(42px, 8vw, 96px);
-      line-height: 1;
-      font-weight: normal;
-      margin: 0 0 14px;
-      color: #fff;
-    }
-    .logo-tagline{
-      font-family: "Playfair Display", serif;
-      font-style: italic;
-      font-size: clamp(16px, 2.2vw, 28px);
-      letter-spacing: 0.5px;
-      margin: 0;
-      color: #ffffffcc;
-      position: relative;
-      display: inline-block;
-      padding: 6px 24px;
-    }
-
-
 body {
   background: #fff;
   font-family: "Roboto", arial, sans-serif;
@@ -269,6 +247,7 @@ textarea.form-control {
   position: relative;
 }
 
+
 .site-hero .scroll-down {
   position: absolute;
   bottom: 20px;
@@ -279,7 +258,6 @@ textarea.form-control {
   color: #fff;
 }
 .site-hero.overlay:before {
-  background: rgba(0, 0, 0, 0.45);
   content: "";
   position: absolute;
   height: 100vh;
@@ -303,22 +281,28 @@ textarea.form-control {
   min-height: 700px;
 }
 
-@media (max-width: 991.98px) {
-  .site-hero-inner .heading {
-    font-size: 40px;
-  }
-}
-.site-hero-inner .sub-heading {
-  font-size: 30px;
-  font-weight: 200;
-  color: #fff;
-  line-height: 1.5;
-}
-@media (max-width: 991.98px) {
-  .site-hero-inner .sub-heading {
-    font-size: 18px;
-  }
-}
+
+ /* ===== Heading + Tagline ===== */
+    .hotel-title{
+      font-family: "FreebooterScript", "FreebooterScript Alts", cursive;
+      font-size: clamp(42px, 8vw, 96px);
+      line-height: 1;
+      font-weight: normal;
+      margin: 0 0 14px;
+      color: #fff;
+    }
+    .hotel-tagline{
+      font-family: "Playfair Display", serif;
+      font-style: italic;
+      font-size: clamp(16px, 2.2vw, 28px);
+      letter-spacing: 0.5px;
+      margin: 0;
+      color: #fff;
+      position: relative;
+      display: inline-block;
+      padding: 6px 24px;
+    }
+
 
 .inner-page .site-hero-inner {
   height: 50vh;
@@ -335,22 +319,6 @@ textarea.form-control {
   height: 70vh;
   min-height: 500px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .menu-open .site-menu-toggle span {
   background: #000;
@@ -1553,10 +1521,6 @@ textarea.form-control {
   background: #fff;
 }
 
-.custom-caption {
-  font-size: 14px;
-  letter-spacing: 0.2em;
-}
 
 .bg-image {
   background-repeat: no-repeat;
